@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Vim neobundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
+chmod u+x install.sh
+./install.sh
