@@ -118,22 +118,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Miniconda2 3.18.3 installer
-export PATH="/home/wyegelwe/miniconda2/bin:$PATH"
+
 export EDITOR=vim
 set -o vi
-export PATH=$PATH:$HOME/.minimesos/bin
 
-
-# aws
-export EC2_HOME=/usr/local/ec2
-export PATH=$PATH:$EC2_HOME/bin
 
 if [ -f $HOME/.secrets ]; then
     source $HOME/.secrets
 fi
 
+# Below may not be portable..
 
+# added by Miniconda2 3.18.3 installer
+export PATH="/home/wyegelwe/miniconda2/bin:$PATH"
+export PATH=$PATH:$HOME/.minimesos/bin
+export EC2_HOME=/usr/local/ec2
+export PATH=$PATH:$EC2_HOME/bin
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
 source activate python3.5
