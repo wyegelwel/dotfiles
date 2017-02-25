@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir ~/bin
+curl https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > ~/bin/lein
+chmod u+x ~/bin/lein
+lein
