@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Basic env set up
+mkdir ~/bin
+
+# Move dot files
+cp .bashrc $HOME
+source $HOME/.bashrc
+cp .gitconfig $HOME
+cp .vimrc $HOME
+
+# The essentials
+sudo apt-get install vim
+sudo apt-get install curl

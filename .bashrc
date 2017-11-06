@@ -130,10 +130,11 @@ fi
 # Below may not be portable..
 
 # added by Miniconda2 3.18.3 installer
-export PATH="/home/wyegelwe/miniconda2/bin:$PATH"
+export PATH="$HOME/miniconda2/bin:$PATH"
 export PATH=$PATH:$HOME/.minimesos/bin
+export PATH=$HOME/bin:$PATH
 export EC2_HOME=/usr/local/ec2
 export PATH=$PATH:$EC2_HOME/bin
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
 
-source activate python3.5
+#source activate python3.5
