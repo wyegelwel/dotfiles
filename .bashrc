@@ -15,6 +15,9 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+# append to the history file, don't overwrite it
+shopt -s histappend
+
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -42,7 +45,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -89,6 +92,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -118,7 +124,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 export EDITOR=vim
 set -o vi
 
@@ -127,14 +132,4 @@ if [ -f $HOME/.secrets ]; then
     source $HOME/.secrets
 fi
 
-# Below may not be portable..
-
-# added by Miniconda2 3.18.3 installer
-export PATH="$HOME/miniconda2/bin:$PATH"
-export PATH=$PATH:$HOME/.minimesos/bin
 export PATH=$HOME/bin:$PATH
-export EC2_HOME=/usr/local/ec2
-export PATH=$PATH:$EC2_HOME/bin
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre/
-
-#source activate python3.5
